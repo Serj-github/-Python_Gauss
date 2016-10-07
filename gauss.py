@@ -30,9 +30,9 @@ def gaussFunc(a):
         if my != g:
             # a[g][:], a[my][:] = a[my][:], a[g][:]
             # numpy.swapaxes(a, 1, 0)
-            b = copy.deepcopy(a[g][:])
-            a[g][:] = copy.deepcopy(a[my][:])
-            a[my][:] = copy.deepcopy(b)
+            b = copy.deepcopy(a[g])
+            a[g] = copy.deepcopy(a[my])
+            a[my] = copy.deepcopy(b)
 
         amain = float(a[g][g])
 
